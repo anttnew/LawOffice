@@ -1,0 +1,80 @@
+/* ****************
+     General
+ ****************** */
+$green: #2d8659;
+$light-green: #39ac73;  
+$m-light-green: #00e6ac;
+$v-light-green: #00b386;
+$grey: #494949;
+$medium-grey: rgb(90, 90, 90);
+$v-light-blue: rgb(209, 209, 224);
+$black: #262626;
+$m-black: #404040;
+$l-black: #595959;
+$black-p: rgb(15, 15, 15);
+$black-footer: rgb(25, 25, 25);
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  border-radius:         $radius;
+}
+
+@mixin linear-gradient($color1, $color2) {
+  background: -webkit-linear-gradient($color1, $color2);
+  background: -o-linear-gradient($color1, $color2);
+  background: -moz-linear-gradient($color1, $color2);
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin skewX($deg) {
+  -webkit-transform: skewX($deg); 
+  -moz-transform:    skewX($deg);
+  -ms-transform:     skewX($deg);
+  -o-transform:      skewX($deg);
+  transform:         skewX($deg);
+}
+  
+@mixin animation-name($name) {
+    animation-name:         $name;
+    -webkit-animation-name: $name;
+    -moz-animation-name:    $name;
+}
+
+@mixin animation-duration($time) {
+    animation-duration:         $time;
+    -webkit-animation-duration: $time;
+    -moz-animation-duration:    $time;
+}
+
+@mixin radial-gradient($color1, $color2) {
+    background: -webkit-radial-gradient($color1, $color2);
+    background: -moz-radial-gradient($color1, $color2);
+    background: -o-radial-gradient($color1, $color2);
+    background: radial-gradient($color1, $color2);
+}
+
+@mixin transition($time1, $time2, $time3) {
+    -webkit-transition: width $time1, height $time2 , -webkit-transform $time3;
+    -moz-transition: width $time1, height $time2 , -moz-transform $time3;
+    -o-transition: width $time1, height $time2 , -o-transform $time3;
+    transition: width $time1, height $time2 , transform $time3;
+}
+
+@mixin scale($number) {
+    -webkit-transform: scale($number);
+    -moz-transform: scale($number);
+    -ms-transform: scale($number);
+    -o-transform: scale($number);
+    transform: scale($number);
+}
+    
+@mixin transition-one($time) {
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -ms-transition: all $time ease;
+    -o-transition: all $time ease;
+    transition: all $time ease;
+}
