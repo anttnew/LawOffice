@@ -78,3 +78,56 @@ $black-footer: rgb(25, 25, 25);
     -o-transition: all $time ease;
     transition: all $time ease;
 }
+
+
+
+
+
+@mixin translateX($number) {
+    -webkit-transform: translateX($number);
+    -moz-transform: translateX($number);
+    -ms-transform: translateX($number);
+    -o-transform: translateX($number);
+    transform: translateX($number);
+}
+
+
+@mixin scaleX($number) {
+    -webkit-transform: scaleX($number);
+    -moz-transform: scaleX($number);
+    -ms-transform: scaleX($number);
+    -o-transform: scaleX($number);
+    transform: scaleX($number);
+}
+
+@mixin transform-origin($number) {
+    -webkit-transform-origin: $number;
+    -moz-transform-origin: $number;
+    -ms-transform-origin: $number;
+    -o-transform-origin: $number;
+    transform-origin: $number;
+}
+
+@mixin transition-property($name) {
+    -webkit-transition-property: $name;
+    -moz-transition-property: $name;
+    -ms-transition-property: $name;
+    -o-transition-property: $name;
+    transition-property: $name;
+}    
+
+@mixin transition-timing-function($name) {
+    -webkit-transition-timing-function: $name;
+    -moz-transition-timing-function: $name;
+    -ms-transition-timing-function: $name;
+    -o-transition-timing-function: $name;
+    transition-timing-function: $name;
+}
+
+@mixin transition-duration($time) {
+    -webkit-transition-duration: $time;
+    -moz-transition-duration: $time;
+    -ms-transition-duration: $time;
+    -o-transition-duration: $time;
+    transition-duration: $time;
+}

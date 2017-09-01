@@ -189,15 +189,31 @@ ul.grid {
     padding: 8px 16px;
     margin-top: 25px;
     font-family: 'Lato', sans-serif;
-    &:focus {
-      color: $light-green;
-      background-color: #eee;
+    @include translateX(0);
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #eee;
+      @include scaleX(0);
+      @include transform-origin(0);
+      @include transition-property(transform);
+      @include transition-timing-function(ease);
+      @include transition-duration(0.4s);
     }
+    &:focus, &:hover, &:active {
+      color: rgb(65, 172, 134);
+    }
+    &:focus:before, &:hover:before, &:active:before {
+       @include scaleX(1);
+    }
+    
   }
-  .nav > li > a:hover {
-    color: $v-light-green;
-    background-color: #eee;
-  }
+ 
   .navbar-nav {
     margin-top: 12px;
     li {
